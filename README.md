@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# shadcn UI Carousel Testimonials
+
+https://github.com/johanguse/shadcn-carousel-testimonials/assets/6184866/2c6435cd-0d93-43d2-b6be-d702e076b485
+
+
 
 ## Getting Started
 
