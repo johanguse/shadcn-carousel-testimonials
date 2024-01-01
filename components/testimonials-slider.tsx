@@ -16,6 +16,16 @@ interface TestimonialSliderProps {
   testimonials: Testimonial[];
 }
 
+interface ContentfulLoaderParams {
+  src: string;
+  width: number;
+  quality?: number;
+}
+
+const imageLoader = ({ src, width, quality }: ContentfulLoaderParams) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
+
 export default function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
   return (
     <>
@@ -42,6 +52,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
                     <div className="mt-6 flex gap-3">
                       <span className="inline-flex rounded-full">
                         <Image
+                          loader={imageLoader}
                           className="h-10 w-10 rounded-full"
                           height={40}
                           width={40}
