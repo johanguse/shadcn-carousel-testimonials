@@ -1,6 +1,7 @@
-'use client'
+"use client";
 
 import Image from "next/image";
+import { imageLoader } from "@/lib/imageLoader";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -15,17 +16,9 @@ interface TestimonialSliderCardProps {
   testimonials: Testimonial[];
 }
 
-interface ContentfulLoaderParams {
-  src: string;
-  width: number;
-  quality?: number;
-}
-
-const imageLoader = ({ src, width, quality }: ContentfulLoaderParams) => {
-  return `${src}?w=${width}&q=${quality || 75}`
-}
-
-export default function TestimonialSliderCard({ testimonials }: TestimonialSliderCardProps) {
+export default function TestimonialSliderCard({
+  testimonials,
+}: TestimonialSliderCardProps) {
   return (
     <section className="w-full py-4">
       <div className="mx-auto lg:max-w-6xl px-3">

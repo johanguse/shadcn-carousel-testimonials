@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { imageLoader } from "@/lib/imageLoader";
+
 import Autoplay from "embla-carousel-autoplay";
 
 import {
@@ -16,17 +18,9 @@ interface TestimonialSliderProps {
   testimonials: Testimonial[];
 }
 
-interface ContentfulLoaderParams {
-  src: string;
-  width: number;
-  quality?: number;
-}
-
-const imageLoader = ({ src, width, quality }: ContentfulLoaderParams) => {
-  return `${src}?w=${width}&q=${quality || 75}`
-}
-
-export default function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
+export default function TestimonialSlider({
+  testimonials,
+}: TestimonialSliderProps) {
   return (
     <>
       <section className="w-full py-4">
